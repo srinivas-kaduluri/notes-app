@@ -1,0 +1,66 @@
+{
+  "expo": {
+    "name": "Minimal Secure Notes",
+    "slug": "minimal-secure-notes",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.skaduluri.minimalsecurenotes",
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false,
+        "NSCameraUsageDescription": "Attach photos or videos to your notes.",
+        "NSPhotoLibraryUsageDescription": "Select photos or videos to attach to your notes.",
+        "NSPhotoLibraryAddUsageDescription": "Save note attachments to your photo library when needed.",
+        "NSLocationWhenInUseUsageDescription": "Use location to trigger note reminders near places you choose.",
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "Allow background location for geofence note reminders.",
+        "UIBackgroundModes": [
+          "location",
+          "fetch",
+          "remote-notification"
+        ]
+      }
+    },
+    "android": {
+      "package": "com.skaduluri.minimalsecurenotes",
+      "adaptiveIcon": {
+        "backgroundColor": "#ffffff"
+      },
+      "permissions": [
+        "android.permission.RECORD_AUDIO",
+        "android.permission.USE_BIOMETRIC",
+        "android.permission.USE_FINGERPRINT",
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.ACCESS_FINE_LOCATION",
+        "android.permission.ACCESS_BACKGROUND_LOCATION",
+        "android.permission.FOREGROUND_SERVICE",
+        "android.permission.FOREGROUND_SERVICE_LOCATION"
+      ]
+    },
+    "web": {
+      "bundler": "metro",
+      "baseUrl": "/YOUR-REPO-NAME"
+    },
+    "plugins": [
+      "expo-image-picker",
+      "expo-local-authentication",
+      [
+        "expo-location",
+        {
+          "isIosBackgroundLocationEnabled": true,
+          "isAndroidBackgroundLocationEnabled": true
+        }
+      ],
+      "expo-notifications"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "4cd444f4-93af-4a6e-a0dc-5c332ef49430"
+      }
+    }
+  }
+}
